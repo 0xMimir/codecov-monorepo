@@ -6,3 +6,16 @@ coverage:
     patch:
       default:
         informational: true
+
+flag_management:
+  default_rules: # the rules that will be followed for any flag added, generally
+    carryforward: true
+  individual_flags:
+    - name: rust-api 
+      paths: 
+      - rust-api/
+      carryforward: true
+    - name: smart-contract
+      paths: 
+      - smart-contract/
+      carryforward: true
