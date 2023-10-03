@@ -41,6 +41,7 @@ jobs:
 
       - name: Upload to codecov.io
         run: |
+          pwd
           curl -Os https://cli.codecov.io/latest/linux/codecov
           chmod +x codecov
           ./codecov do-upload  -F rust-api -t ${{secrets.CODECOV_TOKEN}}
@@ -65,6 +66,7 @@ jobs:
 
       - name: Upload to codecov.io
         run: |
+          pwd
           curl -Os https://cli.codecov.io/latest/linux/codecov
           chmod +x codecov
           ./codecov do-upload -F smart-contract -t ${{secrets.CODECOV_TOKEN}}
